@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>"Royce's First Website"
+        </title>
+        <style>
+    body {
+        background: rgb(125, 198, 205);
+        color: rgb(63, 15, 118);
+        padding: 10px;
+        font-family: arial;
+    }
+    #all-contents {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    /* navigation menu */
+    nav {
+        background: rgb(127, 179, 213);
+        margin: 0 auto;
+        margin-bottom: 20px;
+        display: flex;
+        padding: 10px;
+        border-radius: 50% 20% / 10% 40%;
+    }
+    nav h1 {
+        display: flex;
+        align-items: center;
+        color: white;
+        flex: 1;
+        margin: 0;
+    }
+    nav ul {
+        list-style-image: none;
+    }
+    nav li {
+        display: inline-block;
+        padding: 0 10px;
+    }
+    nav a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    /* main container area beneath menu */
+    main {
+        background: rgb(5, 5, 5);
+        display: flex;
+    }
+    .sidebar {
+        margin-right: 25px;
+        padding: 10px;
+    }
+    .sidebar img {
+        width: 200px;
+    }
+    .content {
+        flex: 1;
+        padding: 15px;
+    }
+    h2, h3 {
+        margin: 0px;
+    }
+</style>
+    </head>
+    <body>
+        <div id="all-contents">
+            <nav>
+                <h1>Royce's First Website lol</h1>
+                <ul>
+                    <li>
+                        <a href="index.html"> Home </a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html"> Portfolio </a>
+                    </li>
+                </ul>
+                <main>
+                    <div class="sidebar">
+                        <img src="https://www.sierraclub.org/sites/www.sierraclub.org/files/styles/amp_metadata_content_image_min_696px_wide/public/sierra/articles/sharing/SIERRA-interstellar_asteroid-TN.jpg?itok=EVWMVkUi"
+                    </div>
+                    
+                    <div class="content">
+                        <h2>"Royce"</h2>
+                        <p>"Student at Operation Spark"</p>
+                        <div id="interests">
+                            <h3>Interests</h3>
+                            <ul>
+                                <li>Music</li>
+                                <li>Weightlifting</li>
+                                <li>Videogames</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </main>
+            </nav>
+        </div>
+        
+    </body>
+</html>
