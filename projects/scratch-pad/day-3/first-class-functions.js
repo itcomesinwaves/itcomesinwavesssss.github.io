@@ -13,9 +13,12 @@
  */
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
+
+ return function(x) {
+     return x > base; 
+}
+     
+
     
     // YOUR CODE ABOVE HERE //
 }
@@ -27,6 +30,9 @@ function createGreaterThanFilter(base) {
  */
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
+    return function(x) {
+        return x < base; 
+    }
     
     
     
@@ -41,11 +47,16 @@ function createLessThanFilter(base) {
  */
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
+return function startsWithChar(string) {
+
+    if (startsWith.toUpperCase() === string.toUpperCase()[0]) { 
+        return true;
+    } else {
+        return false; 
+
+}
+}
+  // YOUR CODE ABOVE HERE //
 }
 
 /** 
@@ -55,9 +66,13 @@ function createStartsWithFilter(startsWith) {
  */
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
+    return function endsWithChar(string) {
+  if  (endsWith.toUpperCase() === string[string.length-1].toUpperCase()) {
+      return true;
+  } else {
+      return false; 
+  }
+    }
     
     // YOUR CODE ABOVE HERE //
 }
@@ -71,10 +86,12 @@ function createEndsWithFilter(endsWith) {
  */
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+ let array = []; 
+ for (var i = 0; i < strings.length; i++) {
+      array.push(modify(strings[i])); 
+      }
+    return array; 
+
     // YOUR CODE ABOVE HERE //
 }
 
@@ -89,10 +106,13 @@ function modifyStrings(strings, modify) {
  */
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+ for (var i = 0; i < strings.length; i++) {
+     if (test(strings[i]) === false) {
+         return false; 
+     }
+ }
+         return true; 
+
     // YOUR CODE ABOVE HERE //
 }
 
@@ -106,4 +126,6 @@ if((typeof process !== 'undefined') &&
     module.exports.createEndsWithFilter = createEndsWithFilter;
     module.exports.modifyStrings = modifyStrings;
     module.exports.allStringsPass = allStringsPass;   
-}
+
+        
+    }

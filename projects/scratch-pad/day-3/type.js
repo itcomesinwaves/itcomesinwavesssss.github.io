@@ -12,10 +12,15 @@
  * TIP: In JavaScript, how can we decipher if a value is an Array? Can typeof
  * work?
  */
-function isArray(value) {
+
+    function isArray(value) {
     // YOUR CODE BELOW HERE //
-    
-    
+
+if (Array.isArray(value)) {
+     return true;
+ } else {
+     return false; 
+ }
     
     
     // YOUR CODE ABOVE HERE //
@@ -31,10 +36,19 @@ function isArray(value) {
  */
 function isObject(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+if (value === null) {
+            return false; 
+    } else if (Array.isArray(value)) {
+            return false; 
+    } else if (Object .prototype.toString.call(value) === "[object Date]"){ 
+           return false;
+    } else if (typeof value === 'object') {
+            return true;
+        
+    } else {
+        return false; 
+    }
+
     // YOUR CODE ABOVE HERE //
 }
 
@@ -46,9 +60,20 @@ function isObject(value) {
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
+
+if (value === null) {
+    return false; 
+} else if (Object .prototype.toString.call(value) === "[object Date]") {    
+    return false; 
+} else if (typeof value === 'object') {
+    return true; 
+} else if (Array.isArray(value)) {
+    return true;
+
+} else { 
+    return false; 
+
+}  
     
     // YOUR CODE ABOVE HERE //
 }
@@ -74,11 +99,29 @@ function isCollection(value) {
  */ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
+  if (typeof value === 'string') {
+        return "string"; 
+} else if (Array.isArray(value)) {
+        return "array";
+} else if (typeof value === typeof object) {
+        return "object"; 
+} else if (value === undefined) {
+        return "undefined"; 
+} else if (typeof value === 'number')   {
+        return "number"; 
+} else if (typeof true === typeof boolean) {
+        return "boolean"; 
+} else if (value === null) {
+        return "null";
+} else if (typeof value === 'function') {
+        return "function"; 
+} else if (Object .prototype.toString.call(value) === "[object Date]") {
+        return "date";
+}  
     
     
     
-    
-    // YOUR CODE ABOVE HERE //
+   // YOUR CODE ABOVE HERE //
 }
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
